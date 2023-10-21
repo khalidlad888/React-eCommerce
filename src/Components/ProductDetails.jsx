@@ -1,10 +1,12 @@
 //importing React
 import React from 'react';
-//import useSeelector hook from redux
-import { useSelector } from 'react-redux';
+//import useSeelector and useDispatch hook from redux
+import { useSelector, useDispatch } from 'react-redux';
 //importing useParams from react router dom
 import { useParams } from 'react-router-dom';
 import { productSelector } from '../features/product/productSlice';
+//import addToCart action from cartSlice
+import { addToCart } from '../features/cart/cartSlice';
 //import css
 import './ProductDetails.css';
 
@@ -14,6 +16,8 @@ const ProductDetails = () => {
   const { productId } = useParams();
   //getting products form state
   const products = useSelector(productSelector);
+  //setting useDispatch in const
+  const dispatch = useDispatch()
 
   //handling error for products not found
   if (!products) {
@@ -28,6 +32,12 @@ const ProductDetails = () => {
     return <h2>Product not found</h2>;
   }
 
+  //function to add product to cart
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+    alert('Product added to cart');
+  };
+
   //if product found showing details of the product
   return (
     <div className="product-details">
@@ -40,6 +50,7 @@ const ProductDetails = () => {
         <p>Price: {product.price}</p>
         <p>Category: {product.category}</p>
         <p>Rating: {product.rating}</p>
+        <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
       </div>
     </div>
   );
