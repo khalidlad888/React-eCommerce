@@ -1,10 +1,17 @@
+//import react and useState
 import React, { useState } from 'react';
+//import useDispatch from react redux
 import { useDispatch } from 'react-redux';
+//import addProduct action from productSlice
 import { addProduct } from '../features/product/productSlice';
-import "./CreateProduct.css"
+//importing useNavigate from react router dom
 import { useNavigate } from 'react-router-dom';
+//import css
+import "./CreateProduct.css"
 
+//function for CreateProduct component
 const CreateProduct = () => {
+  //storing useDispatch and useNavigate in const
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -21,11 +28,13 @@ const CreateProduct = () => {
     category: '',
   });
 
+  //function to set Product in dummy state
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct({ ...product, [name]: value });
   };
 
+  //handle submit form function
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(product);
@@ -91,4 +100,5 @@ const CreateProduct = () => {
   );
 };
 
+//exporting CreateProduct component
 export default CreateProduct;

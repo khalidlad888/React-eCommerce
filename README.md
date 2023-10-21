@@ -1,6 +1,27 @@
-# Getting Started with Create React App and Redux
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This is a simple e-commerce application built using React. It allows users to browse through products, add them to their cart, and complete the purchase. 
+
+## Features
+
+- Browse products
+- Add products to the cart
+- Remove products from the cart
+- Complete the purchase
+
+## Installation
+
+1. Clone the repository.
+   ```sh
+   git clone https://github.com/khalidlad888/React-eCommerce.git
+
+2. Usage
+Browse through the products on the homepage.
+Click on a product to view more details.
+Add products to the cart.
+Review items in the cart.
+Remove items from the cart.
+Proceed to checkout and complete the purchase.
 
 ## Available Scripts
 

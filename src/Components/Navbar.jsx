@@ -1,9 +1,15 @@
+//import react
 import React from 'react';
+//import link form react router dom
 import { Link } from 'react-router-dom';
+//import useSelector from react redux to fetch from state
 import { useSelector } from 'react-redux';
+//import css
 import "./Navbar.css"
 
+//function for Navbar component
 const Navbar = () => {
+  //getting cart items from state
   const cart = useSelector(state => state.cart.cartItems);
 
   return (
@@ -28,4 +34,5 @@ const Navbar = () => {
   );
 };
 
+//exporting Navbar component
 export default Navbar;

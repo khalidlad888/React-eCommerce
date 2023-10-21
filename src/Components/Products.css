@@ -1,3 +1,4 @@
+/* CSS for Products Component */
 .product-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -68,12 +69,12 @@
     width: 25px;
     height: 25px;
     margin-right: 10px;
-    color: cadetblue;
+    color: rgb(77, 169, 173);
 }
 
 .delete-icon{
     width: 25px;
     height: 25px;
     margin-right: 140px;
-    color: darkred;
+    color: #ff0000;
 }

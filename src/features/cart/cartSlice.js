@@ -1,5 +1,7 @@
+//importing createSLice from redux toolkit
 import { createSlice } from '@reduxjs/toolkit';
 
+//creating cartSlice
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
@@ -18,7 +20,9 @@ export const cartSlice = createSlice({
   },
 });
 
+//exporting actions
 export const { addToCart, removeFromCart } = cartSlice.actions;
+//exporting reducer
 export const cartReducer = cartSlice.reducer;
-
+//exporting selector function
 export const cartSelector = (state) => state.cart.cartItems;
